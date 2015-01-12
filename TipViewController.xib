@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipViewController">
             <connections>
                 <outlet property="billTextField" destination="N1Z-NB-eZL" id="qXM-Ix-5zt"/>
+                <outlet property="bottomView" destination="aMz-oz-9yu" id="hrR-zc-6hL"/>
                 <outlet property="fourCustomers" destination="ebS-tR-WvO" id="LId-kO-wkX"/>
                 <outlet property="fourCustomersLabel" destination="Vwy-kb-89s" id="oGH-8V-ucH"/>
                 <outlet property="oneCustomer" destination="l0e-3v-g2T" id="uvm-MN-lEK"/>
@@ -41,9 +42,12 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <action selector="valueChanged:" destination="-1" eventType="editingChanged" id="5BH-JN-dwz"/>
+                    </connections>
                 </textField>
                 <segmentedControl appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-4B-5Jg">
-                    <rect key="frame" x="20" y="148" width="280" height="29"/>
+                    <rect key="frame" x="20" y="127" width="280" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <segments>
                         <segment title="10%"/>
@@ -55,7 +59,7 @@
                     </connections>
                 </segmentedControl>
                 <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMz-oz-9yu">
-                    <rect key="frame" x="0.0" y="195" width="320" height="386"/>
+                    <rect key="frame" x="0.0" y="176" width="320" height="386"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6E-Vu-9wv">

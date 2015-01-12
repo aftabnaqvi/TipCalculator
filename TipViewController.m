@@ -32,9 +32,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalForThreeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalForFourLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+
 - (IBAction)onTap:(id)sender;
 - (void) updateValues;
 - (void) onSettingsButton;
+- (IBAction)valueChanged:(id)sender;
 @end
 
 @implementation TipViewController
@@ -63,6 +66,8 @@
     self.twoCustomers.image = [UIImage imageNamed:@"customer.png"];
     self.threeCustomers.image = [UIImage imageNamed:@"customer.png"];
     self.fourCustomers.image = [UIImage imageNamed:@"customer.png"];
+    
+    [self valueChanged:nil];
     
 }
 
@@ -97,6 +102,18 @@
 
 - (void) onSettingsButton{
     [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
+}
+
+- (IBAction)valueChanged:(id)sender {
+    [self updateValues];
+    if(![self.billTextField.text length])
+    {
+        self.bottomView.alpha = 0;
+    }
+    else{
+        self.bottomView.alpha = 1;
+    }
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
