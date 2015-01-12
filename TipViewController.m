@@ -93,29 +93,6 @@
     self.totalForThreeLabel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, totalAmount/3.0];
     
     self.totalForFourLabel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, totalAmount/4.0];
-    
-//    float floatPart = totalAmount - (int)totalAmount;
-//    NSLog(@"%@", [TipViewController formatWithThousandSeparator:totalAmount]);
-//    NSLog(@"%@", [NSString stringWithFormat:@"%@%@ ---- %0.2f", self.currencySymbol, [TipViewController formatWithThousandSeparator:totalAmount], floatPart]);
-//
-//    
-//    
-//    self.totalLabel.text = [NSString stringWithFormat:@"%@%@%.2f", self.currencySymbol, [TipViewController formatWithThousandSeparator:totalAmount], floatPart];
-//    
-//    
-//    floatPart = tipAmount - (int)tipAmount;
-//    self.tipLabel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, [[TipViewController formatWithThousandSeparator:tipAmount] integerValue]+floatPart];
-//    
-//    
-//    floatPart = totalAmount/2.0 - (int)(totalAmount/2.0);
-//    
-//    self.totalForTwoLbel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, [[TipViewController formatWithThousandSeparator:totalAmount/2.0] integerValue]+floatPart];
-//    
-//    floatPart = totalAmount/3.0 - (int)(totalAmount/3.0);
-//    self.totalForThreeLabel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, [[TipViewController formatWithThousandSeparator:totalAmount/3.0] integerValue]+floatPart];
-//    
-//    floatPart = totalAmount/4.0 - (int)(totalAmount/4.0);
-//    self.totalForFourLabel.text = [NSString stringWithFormat:@"%@%0.2f", self.currencySymbol, [[TipViewController formatWithThousandSeparator:totalAmount/4.0] integerValue]+floatPart];
 }
 
 - (void) onSettingsButton{
